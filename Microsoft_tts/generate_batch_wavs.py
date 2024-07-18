@@ -3,9 +3,13 @@
 # Email: maduo@cuhk.edu.cn
 from pathlib import Path
 import os
-from tts2 import transferMsTTSData, get_SSML
-from tts import mainSeq,get_SSML
+#from tts2 import transferMsTTSData, get_SSML
+from tts import mainSeq
 import asyncio
+
+def get_SSML(path):
+    with open(path,'r',encoding='utf-8') as f:
+        return f.read()
 
 if __name__=="__main__":
     input_dir="input_dir"
